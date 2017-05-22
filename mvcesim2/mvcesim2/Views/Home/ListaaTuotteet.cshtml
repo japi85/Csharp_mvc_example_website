@@ -1,0 +1,42 @@
+﻿@model mvc.asiakasmalli.AsiakasModel1
+@{
+    ViewBag.Title = "ListaaTuotteet";
+}
+
+<h2>Tuotteet</h2>
+
+<br />
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td><form class="form-horizontal" method="post" action="/Home/MuokkausTuoteLomake1">Muokkaa tuotenumerolla: <input type="text" class="form-control" id="muokkaa" name="muokkaa" required placeholder="anna tuotenumero"> <button type="submit" class="btn btn-primary">Muokkaa tuotetta</button></form></td>
+                
+                <td><form class="form-horizontal" method="post" action="/Home/PoistoTuoteLomake1">Poista tuotenumerolla: <input type="text" class="form-control" id="poista" name="poista" required placeholder="anna tuotenumero"> <button type="submit" class="btn btn-danger">Poista tuote</button></form></td>
+                
+            </tr>
+            <tr>
+                <th>Tuotenumero</th>
+                <th>Tuotenimi</th>
+                <th>Hinta</th>
+                <th>Varasto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{while (@Model.tulos.Read())
+                {
+
+                    <tr>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("tuotenumero"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("tuotenimi"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("hinta"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("varasto"))</td>
+      </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "LisaysLomake";
+}
+
+
+<div class="container">
+    <h2>Asiakkaan lisäys</h2>
+    <form class="form-horizontal" method="post" action="/Home/LisaysLomake2">
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nimi">Nimi:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nimi" name="nimi" required placeholder="anna nimi">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nimi">Lahiosoite:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lahiosoite" name="lahiosoite" required placeholder="anna lähiosoite">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nimi">Postinumero:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="postinumero" name="postinumero" required placeholder="anna postinumero">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nimi">Postitoimipaikka:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="postitoimipaikka" name="postitoimipaikka" required placeholder="anna postitoimipaikka">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nimi">Puhelin:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="puh" name="puh" required placeholder="anna puhelinnumero">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Lisää asiakas</button>
+            </div>
+        </div>
+    </form>
+</div>
+

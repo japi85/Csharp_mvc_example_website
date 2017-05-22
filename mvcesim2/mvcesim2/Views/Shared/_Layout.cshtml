@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MVC malli-aplikaatio</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Tilausten käsittely</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/Home/Index">Pääsivu</a></li>
+                        <li><a href="/Home/ListaaAsiakkaat">Listaa asiakkaat</a></li>
+                        <li><a href="/Home/ListaaTilaukset">Listaa tilaustiedot</a></li>
+                        <li><a href="/Home/ListaaTuotteet">Listaa tuotteet</a></li>
+                        <li><a href="/Home/LisaysLomake">Lisää asiakas</a></li>
+                        <li><a href="/Home/LisaaTuoteLomake">Lisää tuote</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <br/><br/>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Jeesoft</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

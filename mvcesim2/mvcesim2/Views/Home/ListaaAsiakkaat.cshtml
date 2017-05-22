@@ -1,0 +1,38 @@
+﻿@model mvc.asiakasmalli.AsiakasModel1
+
+@{
+    ViewBag.Title = "ListaaAsiakkaat";
+}
+<h2>Asiakkaat</h2>
+
+        <br/>
+
+        <div class="container">
+
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nimi</th>
+                        <th>Lähiosoite</th>
+                        <th>Postinumero</th>
+                        <th>Postitoimipaikka</th>
+                        <th>Puhelin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{while(@Model.tulos.Read()) {
+                    <tr>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("nimi"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("lahiosoite"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("postinumero"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("postitoimipaikka"))</td>
+                        <td>@Model.tulos.GetString(@Model.tulos.GetOrdinal("puh"))</td>
+                    </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
